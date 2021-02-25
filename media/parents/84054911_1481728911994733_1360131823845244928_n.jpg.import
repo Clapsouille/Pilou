@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/84054911_1481728911994733_1360131823845244928_n.jpg-65981fa85109c197f5cd4493a000bf61.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://media/parents/84054911_1481728911994733_1360131823845244928_n.jpg"
+dest_files=[ "res://.import/84054911_1481728911994733_1360131823845244928_n.jpg-65981fa85109c197f5cd4493a000bf61.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

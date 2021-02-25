@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bah_homme1.wav-a4a1b273b2d77d9d8e8e19528d24075b.sample"
+
+[deps]
+
+source_file="res://media/ennemi/bah_homme1.wav"
+dest_files=[ "res://.import/bah_homme1.wav-a4a1b273b2d77d9d8e8e19528d24075b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

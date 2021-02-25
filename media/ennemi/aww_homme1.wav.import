@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/aww_homme1.wav-c263f1cf4d5ef7b44e39f9d95b3d3779.sample"
+
+[deps]
+
+source_file="res://media/ennemi/aww_homme1.wav"
+dest_files=[ "res://.import/aww_homme1.wav-c263f1cf4d5ef7b44e39f9d95b3d3779.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
