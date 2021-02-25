@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://personnages/Parents.gd" type="Script" id=1]
+[ext_resource path="res://personnages/Roberte.tscn" type="PackedScene" id=2]
+[ext_resource path="res://personnages/Jean-Francois.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 434.288
+height = 111.028
+
+[node name="Parents" type="RigidBody2D"]
+z_index = 1
+mode = 1
+script = ExtResource( 1 )
+
+[node name="Arrivee" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrivee"]
+position = Vector2( 16.1634, -320.044 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Roberte" parent="." instance=ExtResource( 2 )]
+position = Vector2( -399.556, -850.645 )
+
+[node name="Jeanfrancois" parent="." instance=ExtResource( 3 )]
+position = Vector2( -69.3076, -760.073 )
+[connection signal="body_entered" from="Arrivee" to="." method="_on_Arrivee_body_entered"]

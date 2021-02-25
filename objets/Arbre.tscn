@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://media/items/arbre.png" type="Texture" id=1]
+[ext_resource path="res://objets/Arbre.gd" type="Script" id=2]
+[ext_resource path="res://media/items/tronc.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 244.219
+height = 82.848
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 68.7683
+
+[sub_resource type="NavigationPolygon" id=3]
+vertices = PoolVector2Array( -111.868, 3.74969, -80.0406, -82.4917, -0.986023, -106.619, 85.7688, -73.2516, 114.516, -0.35704, 65.2351, 100.258, -60.5337, 99.7446 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6 ) ]
+outlines = [ PoolVector2Array( -111.868, 3.74969, -80.0406, -82.4917, -0.986023, -106.619, 85.7688, -73.2516, 114.516, -0.35704, 65.2351, 100.258, -60.5337, 99.7446 ) ]
+
+[node name="Arbre" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="Feuillage" type="Area2D" parent="."]
+z_index = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Feuillage"]
+rotation = 1.16588
+z_index = 1
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Feuillage"]
+scale = Vector2( 3, 3 )
+z_index = 1
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tronc" type="StaticBody2D" parent="."]
+z_index = 1
+collision_layer = 2
+collision_mask = 5
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tronc"]
+z_index = 1
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tronc"]
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+navpoly = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="body_entered" from="Feuillage" to="." method="_on_Feuillage_body_entered"]
+[connection signal="body_exited" from="Feuillage" to="." method="_on_Feuillage_body_exited"]

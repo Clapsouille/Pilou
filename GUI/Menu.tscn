@@ -1,0 +1,178 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://media/menu/menu_titre.png" type="Texture" id=1]
+[ext_resource path="res://media/pilou/pilou_menu2.png" type="Texture" id=2]
+[ext_resource path="res://media/pilou/pilou_menu1.png" type="Texture" id=3]
+[ext_resource path="res://GUI/Menu.gd" type="Script" id=4]
+[ext_resource path="res://media/pilou/pilou_menu3.png" type="Texture" id=5]
+[ext_resource path="res://media/tiles/Tilemap.png" type="Texture" id=6]
+[ext_resource path="res://media/HUD/HALO____.TTF" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 7 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "Tilemap.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 200, 200 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+3/name = "Tilemap.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 1000, 200, 200 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tilemap.png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 400, 200, 200 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tilemap.png 5"
+5/texture = ExtResource( 6 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 600, 200, 200 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FondIntro" type="TextureRect" parent="CanvasLayer"]
+margin_right = 2000.0
+margin_bottom = 1600.0
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro" type="TextureRect" parent="CanvasLayer"]
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contenu" type="VBoxContainer" parent="CanvasLayer"]
+margin_left = 150.0
+margin_top = 70.0
+margin_right = 1050.0
+margin_bottom = 366.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Contenu"]
+margin_right = 900.0
+margin_bottom = 180.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="Options" type="VBoxContainer" parent="CanvasLayer/Contenu"]
+margin_top = 210.0
+margin_right = 900.0
+margin_bottom = 310.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 40
+alignment = 1
+
+[node name="Buttes" type="Button" parent="CanvasLayer/Contenu/Options"]
+margin_left = 332.0
+margin_top = -1.0
+margin_right = 567.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 235, 30 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_constants/hseparation = 0
+shortcut_in_tooltip = false
+text = "Buttes Chaumont"
+
+[node name="Quitter" type="Button" parent="CanvasLayer/Contenu/Options"]
+margin_left = 395.0
+margin_top = 70.0
+margin_right = 505.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 110, 30 )
+size_flags_horizontal = 6
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 2 )
+text = "Quitter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 3 )
+cell_size = Vector2( 200, 200 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 5, 0, 65540, 3, 0, 65541, 3, 0, 131072, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 4, 0, 131076, 0, 0, 131077, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0 )
+
+[node name="PilouMenu" type="Node2D" parent="."]
+position = Vector2( 543.681, 506.605 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PilouMenu"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 4 )
+frame = 1
+playing = true
+
+[node name="IntroTimer" type="Timer" parent="."]
+one_shot = true
+[connection signal="pressed" from="CanvasLayer/Contenu/Options/Buttes" to="." method="_on_niveau_pressed" binds= [ "buttes" ]]
+[connection signal="pressed" from="CanvasLayer/Contenu/Options/Quitter" to="." method="_on_Quitter_pressed"]

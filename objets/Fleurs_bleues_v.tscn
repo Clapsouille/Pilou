@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://media/fleurs/Fleurs bleues.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 106.336
+height = 176.484
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( -288, 128, -288, -176, -216, -272, -95.146, -329.569, 67.7087, -331.419, 197.252, -268.498, 278.68, -153.76, 280, 112, 232, 240, 128, 320, -109.951, 321.85, -232.092, 229.319 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ) ]
+outlines = [ PoolVector2Array( -288, 128, -288, -176, -216, -272, -95.146, -329.569, 67.7087, -331.419, 197.252, -268.498, 278.68, -153.76, 280, 112, 232, 240, 128, 320, -109.951, 321.85, -232.092, 229.319 ) ]
+
+[node name="Fleurs_bleues_v" type="StaticBody2D"]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -43.6973, -3.44199 )
+rotation = 1.5708
+z_index = -1
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+navpoly = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
